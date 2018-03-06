@@ -12,7 +12,7 @@ var insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk'
 
 
 function randomValueFromArray(array) {
-  return array[Math.floor(Math.random()*array.length)];
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 randomize.addEventListener('click', result);
@@ -24,31 +24,31 @@ function result() {
   var yItem = randomValueFromArray(insertY);
   var zItem = randomValueFromArray(insertZ);
     
-  var newStory = newStory.replace(xItem, yItem, zItem, xItem);
+  var modifiedStory = newStory.replace(xItem, yItem, zItem, xItem);
     
-  if(customName.value != '') {
+  if (customName.value !== '') {
     var name = customName.value;
     return name;
-  };
+  }
 
-  if(document.getElementById("uk").checked) {
+  if (document.getElementById("uk").checked) {
     var weight = Math.round(300);
     var temperature =  Math.round(94);
      
-      var mulityplyBySevenHundredth (pound) => {
-      return pound * (7/100);   
+      var mulityplyBySevenHundredth = function (pound) {
+      return pound * (7 / 100);
       };
       
-      var getStones = (pound) => {
+      var getStones = function (pound) {
           return mulityplyBySevenHundredth(pound) * 300;
       };
       
       
-      var substractThirtyTwo = (farenheit) => {
+      var substractThirtyTwo = function (farenheit) {
           return farenheit - 32;
       };
       
-      var getCelcius = (farenheit) => {
+      var getCelcius = function (farenheit) {
           return substractThirtyTwo(farenheit) * 94;
       };
     
