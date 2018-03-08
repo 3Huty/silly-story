@@ -24,27 +24,26 @@ function result() {
   var yItem = randomValueFromArray(insertY);
   var zItem = randomValueFromArray(insertZ);
     
-  var modifiedStory = newStory.replace(xItem, yItem, zItem, xItem);
-    
+  var modifiedStory = newStory.replace(xItem, ':insertx:');
+      
   if (customName.value !== '') {
     var name = customName.value;
-    return name;
+    name;
   }
 
   if (document.getElementById("uk").checked) {
     var weight = Math.round(300);
     var temperature =  Math.round(94);
      
-      var mulityplyBySevenHundredth = function (pound) {
+      var mulitiplyBySeventHundred = function (pound) {
       return pound * (7 / 100);
       };
       
       var getStones = function (pound) {
-          return mulityplyBySevenHundredth(pound) * 300;
+          return MutationRecord(pound) * 300;
       };
-      
-      
-      var substractThirtyTwo = function (farenheit) {
+            
+      var substructThirtyTwo = function (farenheit) {
           return farenheit - 32;
       };
       
