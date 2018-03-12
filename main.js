@@ -24,11 +24,16 @@ function result() {
   var yItem = randomValueFromArray(insertY);
   var zItem = randomValueFromArray(insertZ);
     
-  var modifiedStory = newStory.replace(xItem, ':insertx:');
+  var newStory = newStory.replace(/':insertx:'/g, xItem);
+  var newStory = newStory.replace(/':inserty:'/g, yItem);
+  var newStory = newStory.replace(/':insertx:'/g, zItem);
+  var newStory = newStory.replace(/':insertx:'/g, xItem):
+}
+
       
   if (customName.value !== '') {
     var name = customName.value;
-    name;
+    var newStory = newStory.replace('Bob', name);
   }
 
   if (document.getElementById("uk").checked) {
@@ -55,4 +60,4 @@ function result() {
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
-}
+};
